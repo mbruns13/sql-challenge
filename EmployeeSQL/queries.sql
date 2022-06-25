@@ -8,7 +8,7 @@ JOIN salaries
 -- List first name, last name, and hire date for employees who were hired in 1986.
 SELECT employees.first_name, employees.last_name, employees.hire_date
 FROM employees
-WHERE employees.hire_date LIKE '%1996';
+WHERE employees.hire_date LIKE '%1986';
 
 
 -- List the manager of each department with the following information: 
@@ -47,7 +47,8 @@ JOIN departments
 WHERE departments.dept_name = 'Sales';
 
 
--- List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+-- List all employees in the Sales and Development departments, 
+-- including their employee number, last name, first name, and department name.
 SELECT employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
 FROM employees
 JOIN dept_emp
