@@ -63,6 +63,8 @@ FROM employees
 GROUP BY employees.last_name
 ORDER BY "Frequency Count of Employee Last Name" DESC;
 
+
+
 -- BONUS
 -- create joined view of salary and title to use for bar chart in JupyterLab file
 CREATE VIEW salary_titles AS
