@@ -63,3 +63,12 @@ FROM employees
 GROUP BY employees.last_name
 ORDER BY "Frequency Count of Employee Last Name" DESC;
 
+-- BONUS
+-- create joined view of salary, and title
+CREATE VIEW salary_titles AS
+SELECT salaries.salary, employees.emp_title_id
+FROM salaries
+JOIN employees
+    ON employees.emp_no = salaries.emp_no
+JOIN titles
+    ON employees.emp_title_id = titles.title_id;
